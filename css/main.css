@@ -687,6 +687,98 @@ h4:nth-of-type(3){
 		min-height: 535px;
     	object-fit: cover;
 	}
+	/** projects **/
+	main.projects{
+		grid-template-columns: auto 16px 60px 60px 60px 60px 60px 60px 60px 60px 16px auto;
+		grid-column-gap: 16px;
+		grid-row-gap: 100px;
+		margin-top: 150px;
+		margin-bottom: 150px;
+	}
+	.colors{
+		grid-template-columns: 197px 197px 197px;
+	}
+	.carac {
+		font-size: 15px;
+		letter-spacing: 1px;
+	}
+	.projects img{
+		    min-height: auto;
+			object-fit: contain;
+	}
+}
+@media screen and (max-width: 694px) {
+	main.projects{
+		grid-template-columns: auto 16px 40px 40px 40px 40px 40px 40px 40px 40px 16px auto;
+		grid-column-gap: 16px;
+		grid-row-gap: 100px;
+		margin-top: 150px;
+		margin-bottom: 150px;
+	}
+	main .description {
+		grid-column-start: 3;
+		grid-column-end: 11;
+	}
+	.descri-titles {
+		grid-column-start: 3;
+		grid-column-end: 11;
+	}
+	.descri-txt {
+		font-size: 14px;
+		line-height: 170%;
+		grid-row-start: 2;
+		grid-column-end: 11;
+		margin-top: 0px;
+	}
+	h4:first-of-type {
+		grid-row-start: 3;
+	}
+	.typo {
+		grid-row-start: 3;
+	}
+	.carac {
+		grid-row-start: 3;
+		grid-column-start: 6;
+	}
+	.colors {
+		grid-row-start: 4;
+		grid-template-columns: 145px 145px 145px;
+	}
+	h4:nth-of-type(2) {
+		grid-row-start: 4;
+	}
+	h4:nth-of-type(3) {
+		grid-row-start: 5;
+	}
+	.img-projectf {
+		grid-row-start: 5;
+	}
+	.next-project {
+		grid-row-start: 6;
+		grid-column-start: 5;
+    	grid-column-end: 10;
+	}
+	.imgs-m{
+		flex-direction: column;
+	}
+	.img-projectf .img-m {
+		width: 100%;
+	}
+	.projects h1{
+		font-size: 62px;
+	}
+	.img-projectf .img-2t {
+		width: 100%;
+	}
+	.img-projectf .img-t {
+		width: 100%;
+	}
+	.typo-proj2-2 span:first-of-type {
+		font-size: 42px;
+	}
+	.typo-proj1-3 span:first-of-type {
+		font-size: 23px;
+	}
 }
 @media screen and (max-width: 550px) {
 	main{
@@ -718,5 +810,24 @@ h4:nth-of-type(3){
 	}
 	.menu>a{
 		right: 16px;
+	}
+	/**projects **/
+	main.projects{
+		margin: 100px 30px;
+		grid-row-gap: 50px;
+	}
+	.descri-titles, .typo, .carac, .colors, .img-projectf{
+		margin-top: 0px;
+	}
+	.colors{
+		grid-template-columns: 33% 33% 33%;
+		grid-column-gap: 10px;
+    	grid-row-gap: 10px;
+	}
+	.colors div {
+		height: 76px;
+	}
+	.projects h1 {
+		font-size: 38px;
 	}
 }
