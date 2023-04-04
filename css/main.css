@@ -706,6 +706,11 @@ h4:nth-of-type(3){
 		    min-height: auto;
 			object-fit: contain;
 	}
+	/**about**/
+	.about{
+		grid-column-start: 3;
+    	grid-column-end: 5;
+	}
 }
 @media screen and (max-width: 694px) {
 	main.projects{
@@ -829,5 +834,9 @@ h4:nth-of-type(3){
 	}
 	.projects h1 {
 		font-size: 38px;
+	}
+	/**about**/
+	.about{
+		margin: 0 30px;
 	}
 }
