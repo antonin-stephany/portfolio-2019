@@ -1,31 +1,18 @@
-gsap.registerPlugin(ScrollTrigger);
-
-let imgs = gsap.utils.toArray(".img-home")
-gsap.to(imgs, {
-    scrollTrigger: {
-        trigger: imgs,
-        start:"top top",
-        end:"bottom top",
-        markers: true,
-        toggleActions: "restart none reverse none"
-    },
-    x:400,
-    rotation: 360,
-    duration:3
-});
-
-/*
-// ANIMATION SKEW
-let skewSetter = gsap.quickSetter(".img-home", "skewY", "deg")
-let proxy = {skew: 0}
-ScrollTrigger.create({
-    onUpdate: self =>{
-        let skew = self.getVelocity() / -300;
-        if(Math.abs(skew) > Math.abs(proxy.skew)){
-            proxy.skew = skew;
-            gsap.to(proxy, {skew: 0, duration:1, ease:"power3", overwrite:true, onUpdate: () => skewSetter(proxy.skew)})
+const observer = new IntersectionObserver((entries)=>{
+    for(const entry of entries){
+        if(entry.isIntersecting){
+            entry.target.classList.add('isVisible')
+            observer.unobserve(entry.target)
         }
     }
-});
-gsap.set(".img-home",{transformOrigin:"center center", force3D:true})
-*/
+},{
+    rootMargin: '0px 0px -100px 0px'
+})
+const itemsTitle = document.querySelectorAll('.container h2')
+for (const item of itemsTitle) {
+  observer.observe(item)
+}
+const itemsImg = document.querySelectorAll('.type-p .line')
+for (const item of itemsImg) {
+  observer.observe(item)
+}

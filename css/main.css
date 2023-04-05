@@ -161,9 +161,6 @@ main .img-lien5{
 }
 
 /** h2 projects **/
-main h2{
-  margin-top: 100px;
-}
 main .h2-lien1{
   grid-row-start: 1;
   grid-column-start: 6;
@@ -222,7 +219,7 @@ main .p5{
   grid-column-start: 7;
 }
 .line{
-    width: 50px;
+    width: 0px;
     height: 1px;
     margin-right: 10px;
     margin-top: 2px;
@@ -839,4 +836,25 @@ h4:nth-of-type(3){
 	.about{
 		margin: 0 30px;
 	}
+}
+
+/**animation css **/
+h2.isVisible{
+	transform: translateY(0%);
+	opacity: 100%;
+	transition: transform 0.7s ease-out, opacity 0.7s linear;
+}
+h2{
+	transform: translateY(100%);
+	opacity: 0;
+}
+.container{
+	overflow: hidden;
+	width: fit-content;
+	margin-top: 100px;
+
+}
+.line.isVisible{
+	width: 50px;
+	transition: 0.5s ease-out;
 }
