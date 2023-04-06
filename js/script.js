@@ -1,18 +1,29 @@
+//apparition titre premiere visite du site
 const observer = new IntersectionObserver((entries)=>{
     for(const entry of entries){
         if(entry.isIntersecting){
-            entry.target.classList.add('isVisible')
+          console.log(entry.target.parentNode.previousSibling.previousSibling)
+            entry.target.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.querySelector('.container h2').classList.add('isVisible');
+            entry.target.parentNode.previousSibling.previousSibling.querySelector('.line').classList.add('isVisible');
             observer.unobserve(entry.target)
         }
     }
 },{
-    rootMargin: '0px 0px -100px 0px'
+  threshold: 1.0,
 })
-const itemsTitle = document.querySelectorAll('.container h2')
-for (const item of itemsTitle) {
-  observer.observe(item)
-}
-const itemsImg = document.querySelectorAll('.type-p .line')
+
+const itemsImg = document.querySelectorAll('.img-home img')
 for (const item of itemsImg) {
   observer.observe(item)
+}
+
+//anim hover img
+const itemImgLink = document.querySelectorAll('.img-home')
+for (const item of itemsImg) {
+  item.addEventListener("mouseover", function(event){
+    event.target.parentNode.previousSibling.previousSibling.classList.add("hoverEffect");
+  });
+  item.addEventListener("mouseleave", function(event){
+    event.target.parentNode.previousSibling.previousSibling.classList.remove("hoverEffect");
+  });
 }
