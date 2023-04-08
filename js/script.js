@@ -17,7 +17,7 @@ for (const item of itemsImg) {
 }
 
 //anim hover img
-const itemImgLink = document.querySelectorAll('.img-home')
+const itemImgLink = document.querySelectorAll('.img-home');
 for (const item of itemsImg) {
   item.addEventListener("mouseover", function(event){
     event.target.parentNode.previousSibling.previousSibling.classList.add("hoverEffect");

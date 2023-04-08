@@ -883,7 +883,8 @@ h4:nth-of-type(3){
 		overflow: hidden;
 	}
 	main .container-anim-loop{
-		width: calc(100vw - 20px);
+		width: 100vw; 
+		max-width: 100%;
 		overflow: hidden;
 		position: absolute;
 		height: 72px;
