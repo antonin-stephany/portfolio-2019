@@ -89,6 +89,7 @@ a{
 	margin-top: 0px;
 	margin-bottom: 50px;
 	color: #ffffff;
+	transform: translateY(0%);
 }
 .about p{
 	font-family: PT Sans;
@@ -164,31 +165,31 @@ main .img-lien5{
 main .h2-lien1{
   grid-row-start: 1;
   grid-column-start: 6;
-	z-index: 1;
+	z-index: 3;
 	pointer-events: none;
 }
 main .h2-lien2{
   grid-row-start: 2;
   grid-column-start: 7;
-	z-index: 1;
+	z-index: 3;
 	pointer-events: none;
 }
 main .h2-lien3{
   grid-row-start: 3;
   grid-column-start: 6;
-	z-index: 1;
+	z-index: 3;
 	pointer-events: none;
 }
 main .h2-lien4{
   grid-row-start: 4;
   grid-column-start: 7;
-	z-index: 1;
+	z-index: 3;
 	pointer-events: none;
 }
 main .h2-lien5{
   grid-row-start: 5;
   grid-column-start: 5;
-	z-index: 1;
+	z-index: 3;
 	pointer-events: none;
 }
 
@@ -203,6 +204,7 @@ main .type-p{
   align-self: end;
   transform-origin: 8px 8px;
   transition: 0.6s cubic-bezier(.165,.84,.44,1);
+  position: relative;
 }
 main .p1{
   grid-row-start: 1;
@@ -867,6 +869,7 @@ h4:nth-of-type(3){
 	main .img-home{
 		overflow: hidden;
 		transition: 0.6s cubic-bezier(.165,.84,.44,1);
+		z-index: 2;
 	}
 	main .img-home:hover{
 		transform: scale(0.95);
@@ -874,6 +877,44 @@ h4:nth-of-type(3){
 	}
 	main .type-p.hoverEffect{
 		transform-origin: -6px 8px;
+		transition: 0.6s cubic-bezier(.165,.84,.44,1);
+	}
+	main{
+		overflow: hidden;
+	}
+	main .container-anim-loop{
+		width: calc(100vw - 20px);
+		overflow: hidden;
+		position: absolute;
+		height: 72px;
+		margin-top: 20px;
+	}
+	main .text-outline{
+		font-family: Druk Wide;
+    	font-size: 72px;
+		color:#F2F2F2;
+		-webkit-text-stroke: 1px #000000;
+		animation: carousel 3s linear infinite;
+		transform: translateY(-5px);
+		width: 100vw;
+	}
+	main .text-outline-container{
+		position: absolute;
+		width: 200vw;
+		z-index: 1;
+		display: flex;
+		left: -50vw;
+		transform: translateY(72px);
+		transition: 0.6s cubic-bezier(.165,.84,.44,1);
+	}
+	@keyframes carousel{
+		100%
+		{
+			transform: translateX(100%) translateY(-5px);
+		}
+	}
+	main .text-outline-container.hoverEffect{
+		transform: translateY(0px);
 		transition: 0.6s cubic-bezier(.165,.84,.44,1);
 	}
 }
