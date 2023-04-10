@@ -1,4 +1,3 @@
-
 //apparition titre premiere visite du site
 const observer = new IntersectionObserver((entries)=>{
     for(const entry of entries){
