@@ -141,8 +141,7 @@ h2{
 }
 /** img projects **/
 main img{
-  max-width: 100%;
-  height: auto;
+  width: 100%;
 }
 main .img-lien1{
   grid-row-start: 1;
@@ -921,8 +920,11 @@ h4:nth-of-type(3){
 		color:#F2F2F2;
 		-webkit-text-stroke: 1px #000000;
 		animation: carousel 6s linear infinite;
-		transform: translateY(-6px);
 		width: 100%;
+	}
+	@keyframes carousel{
+		0% { transform: translateX(0%) translateY(-6px); }
+		100%{ transform: translateX(100%) translateY(-6px); }
 	}
 	main .text-outline-container{
 		position: absolute;
@@ -932,10 +934,6 @@ h4:nth-of-type(3){
 		left: -100vw;
 		transform: translateY(72px);
 		transition: 0.6s cubic-bezier(.165,.84,.44,1);
-	}
-	@keyframes carousel{
-		0% { transform: translateX(0%) translateY(-6px); }
-		100%{ transform: translateX(100%) translateY(-6px); }
 	}
 	main .text-outline-container.hoverEffect{
 		transform: translateY(0px);
