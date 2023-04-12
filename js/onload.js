@@ -1,6 +1,5 @@
 // animation onload
-window.onload = () => {
-    setTimeout( function () {
+window.onpageshow = () => {
       const transition_el = document.querySelector('.animation-onload');
       const links = document.querySelectorAll('a');
       setTimeout(() => {
@@ -17,5 +16,4 @@ window.onload = () => {
           }, 500);
         })
       }
-    },200);
   }
